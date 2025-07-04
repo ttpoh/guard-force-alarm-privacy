@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>GUARD-FORCE-ALARM 개인정보처리방침</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; margin: 40px; max-width: 800px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        fetch('privacy_policy_en.md')
+            .then(response => response.text())
+            .then(text => document.getElementById('content').innerHTML = marked.parse(text));
+    </script>
+</body>
+</html>
